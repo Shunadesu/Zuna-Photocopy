@@ -16,12 +16,12 @@ const PageLoader = ({ onDone }) => {
   return (
     <div className="fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center transition-all">
       <div className="w-24 h-24 flex items-center justify-center mb-4">
-        <svg className="animate-spin h-12 w-12 text-primary-600" viewBox="0 0 24 24">
+        <svg className="animate-spin h-12 w-12" style={{ color: 'var(--primary-600)' }} viewBox="0 0 24 24">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
         </svg>
       </div>
-      <div className="text-3xl font-bold text-primary-600">{percent}%</div>
+      <div className="text-3xl font-bold" style={{ color: 'var(--primary-600)' }}>{percent}%</div>
       <div className="mt-2 text-gray-400">Đang tải trang chủ...</div>
     </div>
   );

@@ -21,6 +21,11 @@ function App() {
   // Initialize theme on app start
   useEffect(() => {
     setTheme(currentTheme);
+    // Đặt class theme lên body
+    document.body.classList.remove(
+      ...Array.from(document.body.classList).filter(c => c.startsWith('theme-'))
+    );
+    document.body.classList.add(`theme-${currentTheme}`);
   }, [currentTheme, setTheme]);
 
   return (
@@ -36,6 +41,7 @@ function App() {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://zuna-photocopy.com" />
           <link rel="canonical" href="https://zuna-photocopy.com" />
+          <meta name="theme-color" content="#3b82f6" />
         </Helmet>
         <Routes>
           <Route path="/" element={<Layout />}>
