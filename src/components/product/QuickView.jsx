@@ -62,7 +62,7 @@ const QuickView = ({ product, isOpen, onClose }) => {
                 key={index}
                 onClick={() => setSelectedImage(index)}
                 className={`aspect-square overflow-hidden rounded-lg border-2 ${
-                  selectedImage === index ? 'border-primary-600' : 'border-gray-200'
+                  selectedImage === index ? 'border-dynamic-primary' : 'border-gray-200'
                 }`}
               >
                 <img
@@ -144,7 +144,7 @@ const QuickView = ({ product, isOpen, onClose }) => {
           <div className="space-y-2">
             {product.originalPrice && product.originalPrice > product.price && (
               <div className="flex items-center space-x-2">
-                <span className="text-2xl font-bold text-primary-600">
+                <span className="text-2xl font-bold text-dynamic-primary">
                   {formatPrice(product.price)}
                   {rentProduct && <span className="text-sm text-gray-500">/tháng</span>}
                 </span>
@@ -160,7 +160,7 @@ const QuickView = ({ product, isOpen, onClose }) => {
               </div>
             )}
             {(!product.originalPrice || product.originalPrice <= product.price) && (
-              <span className="text-2xl font-bold text-primary-600">
+              <span className="text-2xl font-bold text-dynamic-primary">
                 {formatPrice(product.price)}
                 {rentProduct && <span className="text-sm text-gray-500">/tháng</span>}
               </span>
@@ -228,7 +228,7 @@ const QuickView = ({ product, isOpen, onClose }) => {
           <div className="text-center">
             <Link
               to={getProductUrl(product)}
-              className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"
+              className="inline-flex items-center text-dynamic-primary hover:text-dynamic-primary font-medium"
               onClick={onClose}
             >
               <Eye className="h-4 w-4 mr-2" />
@@ -241,7 +241,7 @@ const QuickView = ({ product, isOpen, onClose }) => {
             <div className="grid grid-cols-1 gap-3">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <feature.icon className="h-5 w-5 text-primary-600" />
+                  <feature.icon className="h-5 w-5 text-dynamic-primary" />
                   <span className="text-sm text-gray-600">{feature.text}</span>
                 </div>
               ))}

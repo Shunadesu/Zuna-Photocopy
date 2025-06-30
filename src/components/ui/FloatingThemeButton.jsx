@@ -29,7 +29,7 @@ const FloatingThemeButton = () => {
           className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center floating-button ${
             isOpen 
               ? 'bg-gray-800 text-white scale-110' 
-              : 'bg-primary-600 text-white hover:bg-primary-700 hover:scale-105'
+              : 'bg-dynamic-primary text-white hover:bg-dynamic-primary hover:scale-105'
           }`}
           title="Tùy chỉnh tone màu"
         >
@@ -68,7 +68,7 @@ const FloatingThemeButton = () => {
                     onClick={() => handleThemeChange(themeName)}
                     className={`p-2 sm:p-3 rounded-lg border-2 transition-all hover:shadow-md ${
                       isActive 
-                        ? 'border-primary-600 bg-primary-50 shadow-md' 
+                        ? 'border-dynamic-primary bg-primary-50 shadow-md' 
                         : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                     }`}
                   >
@@ -78,13 +78,13 @@ const FloatingThemeButton = () => {
                         style={{ backgroundColor: getThemeColor(themeName) }}
                       />
                       <span className={`text-xs sm:text-sm font-medium ${
-                        isActive ? 'text-primary-700' : 'text-gray-700'
+                        isActive ? 'text-dynamic-primary' : 'text-gray-700'
                       }`}>
                         {theme.name}
                       </span>
                     </div>
                     {isActive && (
-                      <div className="mt-1 text-xs text-primary-600 font-medium">
+                      <div className="mt-1 text-xs text-dynamic-primary font-medium">
                         ✓ Đang sử dụng
                       </div>
                     )}

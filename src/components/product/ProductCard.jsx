@@ -56,14 +56,14 @@ const ProductCard = ({ product }) => {
             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-2">
               <button
                 onClick={handleQuickView}
-                className="p-2 bg-white rounded-full hover:bg-primary-600 hover:text-white transition-colors"
+                className="p-2 bg-white rounded-full hover:bg-dynamic-primary hover:text-white transition-colors"
                 title="Xem nhanh"
               >
                 <Eye className="h-4 w-4" />
               </button>
               <button
                 onClick={handleAddToCart}
-                className="p-2 bg-white rounded-full hover:bg-primary-600 hover:text-white transition-colors"
+                className="p-2 bg-white rounded-full hover:bg-dynamic-primary hover:text-white transition-colors"
                 title="Thêm vào giỏ hàng"
               >
                 <ShoppingCart className="h-4 w-4" />
@@ -162,7 +162,7 @@ const ProductCard = ({ product }) => {
                     {formatPrice(product.originalPrice)}
                   </span>
                 )}
-                <span className="text-lg font-bold text-primary-600">
+                <span className="text-lg font-bold text-dynamic-primary">
                   {formatPrice(product.price)}
                   {rentProduct && <span className="text-sm text-gray-500">/tháng</span>}
                 </span>

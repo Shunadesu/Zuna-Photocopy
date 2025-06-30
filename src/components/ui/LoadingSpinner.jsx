@@ -9,7 +9,7 @@ const LoadingSpinner = ({ size = 'md', className = '' }) => {
   return (
     <div className={`flex justify-center items-center ${className}`}>
       <svg 
-        className={`animate-spin ${sizeClasses[size]} text-primary-600`} 
+        className={`animate-spin ${sizeClasses[size]} text-dynamic-primary`} 
         fill="none" 
         viewBox="0 0 24 24"
       >

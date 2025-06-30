@@ -21,11 +21,11 @@ function App() {
   // Initialize theme on app start
   useEffect(() => {
     setTheme(currentTheme);
-    // Đặt class theme lên body
-    document.body.classList.remove(
-      ...Array.from(document.body.classList).filter(c => c.startsWith('theme-'))
+    // Đặt class theme lên html thay vì body
+    document.documentElement.classList.remove(
+      ...Array.from(document.documentElement.classList).filter(c => c.startsWith('theme-'))
     );
-    document.body.classList.add(`theme-${currentTheme}`);
+    document.documentElement.classList.add(`theme-${currentTheme}`);
   }, [currentTheme, setTheme]);
 
   return (

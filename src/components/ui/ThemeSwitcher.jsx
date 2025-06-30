@@ -45,7 +45,7 @@ const ThemeSwitcher = () => {
                     onClick={() => handleThemeChange(themeName)}
                     className={`p-3 rounded-lg border-2 transition-all ${
                       isActive 
-                        ? 'border-primary-600 bg-primary-50' 
+                        ? 'border-dynamic-primary bg-primary-50' 
                         : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                     }`}
                   >
@@ -55,13 +55,13 @@ const ThemeSwitcher = () => {
                         style={{ backgroundColor: getThemeColor(themeName) }}
                       />
                       <span className={`text-sm font-medium ${
-                        isActive ? 'text-primary-700' : 'text-gray-700'
+                        isActive ? 'text-dynamic-primary' : 'text-gray-700'
                       }`}>
                         {theme.name}
                       </span>
                     </div>
                     {isActive && (
-                      <div className="mt-1 text-xs text-primary-600">
+                      <div className="mt-1 text-xs text-dynamic-primary">
                         Đang sử dụng
                       </div>
                     )}

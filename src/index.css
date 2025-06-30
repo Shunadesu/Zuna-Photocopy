@@ -469,4 +469,14 @@
 .border-secondary-600 { border-color: var(--color-secondary-600); }
 .border-secondary-700 { border-color: var(--color-secondary-700); }
 .border-secondary-800 { border-color: var(--color-secondary-800); }
-.border-secondary-900 { border-color: var(--color-secondary-900); } 
+.border-secondary-900 { border-color: var(--color-secondary-900); }
+
+.bg-dynamic-primary {
+  background-color: var(--primary-600) !important;
+}
+.text-dynamic-primary {
+  color: var(--primary-600) !important;
+}
+.border-dynamic-primary {
+  border-color: var(--primary-600) !important;
+} 

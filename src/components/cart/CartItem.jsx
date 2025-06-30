@@ -66,7 +66,7 @@ const CartItem = ({ item }) => {
               {formatPrice(item.originalPrice)}
             </span>
           )}
-          <span className="text-lg font-bold text-primary-600">
+          <span className="text-lg font-bold text-dynamic-primary">
             {formatPrice(item.price)}
             {rentProduct && <span className="text-sm text-gray-500">/tháng</span>}
           </span>

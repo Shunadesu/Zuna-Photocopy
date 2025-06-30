@@ -471,7 +471,7 @@ const Home = () => {
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
                   <div className="mx-auto w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                    <feature.icon className="h-8 w-8 text-primary-600" />
+                    <feature.icon className="h-8 w-8 text-dynamic-primary" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {feature.title}

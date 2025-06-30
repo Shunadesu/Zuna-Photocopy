@@ -26,7 +26,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <div className="flex items-center space-x-2">
-            <ShoppingCart className="h-6 w-6 text-primary-600" />
+            <ShoppingCart className="h-6 w-6 text-dynamic-primary" />
             <span className="text-lg font-bold text-gray-900">Giỏ hàng</span>
           </div>
           <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100">
@@ -50,7 +50,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                 <div className="flex-1">
                   <div className="font-semibold text-gray-900 line-clamp-1">{item.name}</div>
                   <div className="text-sm text-gray-500">SL: {item.quantity}</div>
-                  <div className="text-sm text-primary-600 font-bold">
+                  <div className="text-sm text-dynamic-primary font-bold">
                     {item.price.toLocaleString('vi-VN')}đ
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
         <div className="p-4 border-t border-gray-200 bg-white">
           <div className="flex items-center justify-between mb-4">
             <span className="text-gray-700 font-medium">Tổng cộng:</span>
-            <span className="text-xl font-bold text-primary-600">
+            <span className="text-xl font-bold text-dynamic-primary">
               {getTotalPrice().toLocaleString('vi-VN')}đ
             </span>
           </div>

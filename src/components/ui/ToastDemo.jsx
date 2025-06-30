@@ -70,6 +70,21 @@ const ToastDemo = () => {
           Promise Toast
         </Button>
       </div>
+
+      <div className="flex items-center space-x-2">
+        <span className="text-dynamic-primary font-semibold">Thành công!</span>
+      </div>
+
+      <div className="mt-2 text-sm text-gray-600">
+        Đây là một thông báo toast demo.
+      </div>
+
+      <button
+        className="mt-4 px-4 py-2 bg-primary-50 border border-dynamic-primary text-dynamic-primary rounded hover:bg-primary-100 transition"
+        onClick={showToast}
+      >
+        Hiện Toast
+      </button>
     </div>
   );
 };

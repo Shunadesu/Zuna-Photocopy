@@ -92,7 +92,7 @@ const LoginForm = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
-            <div className="mx-auto h-12 w-12 bg-primary-600 rounded-lg flex items-center justify-center">
+            <div className="mx-auto h-12 w-12 bg-dynamic-primary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -102,7 +102,7 @@ const LoginForm = () => {
               Hoặc{' '}
               <Link
                 to="/register"
-                className="font-medium text-primary-600 hover:text-primary-500"
+                className="font-medium text-dynamic-primary hover:text-dynamic-primary"
               >
                 đăng ký tài khoản mới
               </Link>
@@ -159,7 +159,7 @@ const LoginForm = () => {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-dynamic-primary focus:ring-primary-500 border-gray-300 rounded"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
                   Ghi nhớ đăng nhập
@@ -169,7 +169,7 @@ const LoginForm = () => {
               <div className="text-sm">
                 <Link
                   to="/forgot-password"
-                  className="font-medium text-primary-600 hover:text-primary-500"
+                  className="font-medium text-dynamic-primary hover:text-dynamic-primary"
                 >
                   Quên mật khẩu?
                 </Link>

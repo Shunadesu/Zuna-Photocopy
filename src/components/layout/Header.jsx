@@ -23,7 +23,7 @@ function DropdownMenu({ items, type }) {
               return (
                 <li
                   key={i}
-                  className="text-gray-500 py-1 border-b border-gray-100 hover:text-primary-600 cursor-pointer"
+                  className="text-gray-500 py-1 border-b border-gray-100 hover:text-dynamic-primary cursor-pointer"
                 >
                   <Link
                     to={productUrl}
@@ -41,7 +41,7 @@ function DropdownMenu({ items, type }) {
       <div className="col-span-3 mt-4 pt-4 border-t border-gray-200">
         <Link
           to={getOverviewUrl()}
-          className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"
+          className="inline-flex items-center text-dynamic-primary hover:text-dynamic-primary font-medium"
         >
           Xem tất cả {type === 'buy' ? 'máy bán' : 'máy thuê'} →
         </Link>
@@ -131,7 +131,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-dynamic-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <span className="ml-2 text-xl font-bold text-gray-900">Zuna Photocopy</span>
@@ -142,10 +142,10 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8 relative">
             {navigation.map((item) =>
               item.type === 'dropdown' ? (
-                <Link key={item.name} to={item.href} className={`relative group px-3 py-2 text-sm font-medium cursor-pointer text-gray-700 hover:text-primary-600 transition-colors duration-200 ${
+                <Link key={item.name} to={item.href} className={`relative group px-3 py-2 text-sm font-medium cursor-pointer text-gray-700 hover:text-dynamic-primary transition-colors duration-200 ${
                     isActive(item.href)
-                      ? 'text-primary-600 border-b-2 border-primary-600'
-                      : 'text-gray-700 hover:text-primary-600'
+                      ? 'text-dynamic-primary border-b-2 border-dynamic-primary'
+                      : 'text-gray-700 hover:text-dynamic-primary'
                   } `}>
                   
                     {item.name}
@@ -158,10 +158,10 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`${
+                  className={`$${
                     isActive(item.href)
-                      ? 'text-primary-600 border-b-2 border-primary-600'
-                      : 'text-gray-700 hover:text-primary-600'
+                      ? 'text-dynamic-primary border-b-2 border-dynamic-primary'
+                      : 'text-gray-700 hover:text-dynamic-primary'
                   } px-3 py-2 text-sm font-medium transition-colors duration-200`}
                 >
                   {item.name}
@@ -175,7 +175,7 @@ const Header = () => {
             {/* Cart */}
             <button
               type="button"
-              className="relative p-2 text-gray-700 hover:text-primary-600 transition-colors"
+              className="relative p-2 text-gray-700 hover:text-dynamic-primary transition-colors"
               onClick={openCartDrawer}
             >
               <ShoppingCart className="h-6 w-6" />
@@ -212,14 +212,14 @@ const Header = () => {
                     <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 z-50 animate-fadeIn">
                       <Link
                         to="/login"
-                        className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors rounded-t-lg"
+                        className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-dynamic-primary transition-colors rounded-t-lg"
                         onClick={() => setShowAuthDropdown(false)}
                       >
                         Đăng nhập
                       </Link>
                       <Link
                         to="/register"
-                        className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors rounded-b-lg"
+                        className="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-dynamic-primary transition-colors rounded-b-lg"
                         onClick={() => setShowAuthDropdown(false)}
                       >
                         Đăng ký
@@ -233,7 +233,7 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-primary-600"
+              className="md:hidden p-2 text-gray-700 hover:text-dynamic-primary"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -250,7 +250,7 @@ const Header = () => {
                   to={item.href}
                   className={`$${
                     isActive(item.href)
-                      ? 'bg-primary-50 text-primary-600'
+                      ? 'bg-primary-50 text-dynamic-primary'
                       : 'text-gray-700 hover:bg-gray-50'
                   } block px-3 py-2 rounded-md text-base font-medium`}
                   onClick={() => setIsMenuOpen(false)}

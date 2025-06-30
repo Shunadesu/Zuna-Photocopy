@@ -235,9 +235,11 @@ export const useThemeStore = create(
         if (theme) {
           Object.entries(theme.primary).forEach(([key, value]) => {
             document.documentElement.style.setProperty(`--color-primary-${key}`, value);
+            document.documentElement.style.setProperty(`--primary-${key}`, value);
           });
           Object.entries(theme.secondary).forEach(([key, value]) => {
             document.documentElement.style.setProperty(`--color-secondary-${key}`, value);
+            document.documentElement.style.setProperty(`--secondary-${key}`, value);
           });
         }
       },

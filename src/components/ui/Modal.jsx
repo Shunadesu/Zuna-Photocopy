@@ -43,10 +43,13 @@ const Modal = ({ isOpen, onClose, title, children, size = 'md' }) => {
                 {title}
               </h3>
               <button
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 focus:outline-none"
                 onClick={onClose}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
               >
-                <X className="h-6 w-6" />
+                <span className="sr-only">Đóng</span>
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
           )}
