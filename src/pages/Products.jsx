@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Filter, Grid, List, Search } from 'lucide-react';
-import ProductGrid from '../components/product/ProductGrid';
-import SEO from '../components/ui/SEO';
-import Button from '../components/ui/Button';
+import { ProductGrid, Button, SEO } from '../components';
 
 function useQuery() {
   const { search } = useLocation();

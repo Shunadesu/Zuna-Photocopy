@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Filter, Grid, List, Search, Calendar } from 'lucide-react';
-import ProductGrid from '../components/product/ProductGrid';
-import ProductSwiper from '../components/product/ProductSwiper';
-import Button from '../components/ui/Button';
-import Input from '../components/ui/Input';
-import SEO from '../components/ui/SEO';
+import { ProductGrid, Button, Input, SEO } from '../components';
 
 const RentProducts = () => {
   const [searchParams, setSearchParams] = useSearchParams();

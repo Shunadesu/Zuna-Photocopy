@@ -1,11 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Filter, Grid, List, Search, ShoppingCart } from 'lucide-react';
-import ProductGrid from '../components/product/ProductGrid';
-import ProductSwiper from '../components/product/ProductSwiper';
-import Button from '../components/ui/Button';
-import Input from '../components/ui/Input';
-import SEO from '../components/ui/SEO';
+import { ProductGrid, Button, Input, SEO } from '../components';
 
 const BuyProducts = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -14,7 +10,6 @@ const BuyProducts = () => {
   const [priceRange, setPriceRange] = useState([0, 100000000]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
-
   const category = searchParams.get('category') || '';
 
   // Mock data cho sản phẩm bán

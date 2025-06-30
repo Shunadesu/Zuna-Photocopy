@@ -1,14 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Star, CheckCircle, Truck, Shield, Clock, ShoppingCart, Calendar } from 'lucide-react';
-import ProductCard from '../components/product/ProductCard';
-import ProductSwiper from '../components/product/ProductSwiper';
-import Button from '../components/ui/Button';
-import SEO from '../components/ui/SEO';
-import ThemePreview from '../components/ui/ThemePreview';
+import { ProductCard, ProductSwiper, Button, SEO, ThemePreview, PageLoader, ProductGrid } from '../components';
 import { useScrollToTop } from '../hooks/useScrollToTop';
-import ProductGrid from '../components/product/ProductGrid';
-import PageLoader from '../components/ui/PageLoader';
 
 const Home = () => {
   useScrollToTop(); // Scroll to top when component mounts
@@ -353,13 +347,6 @@ const Home = () => {
     return () => clearInterval(timer);
   }, [heroSlides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
 
   const features = [
     {
@@ -376,6 +363,27 @@ const Home = () => {
       icon: Clock,
       title: 'Hỗ trợ 24/7',
       description: 'Đội ngũ kỹ thuật hỗ trợ mọi lúc'
+    }
+  ];
+
+  const company =[
+    {
+      name: 'Nguyễn Văn A',
+      company: 'Công ty ABC',
+      rating: 5,
+      comment: 'Dịch vụ rất tốt, máy photocopy chất lượng cao, giá cả hợp lý. Nhân viên phục vụ nhiệt tình.'
+    },
+    {
+      name: 'Trần Thị B',
+      company: 'Văn phòng XYZ',
+      rating: 5,
+      comment: 'Đã sử dụng dịch vụ nhiều năm, rất hài lòng về chất lượng và dịch vụ bảo hành.'
+    },
+    {
+      name: 'Lê Văn C',
+      company: 'Công ty DEF',
+      rating: 5,
+      comment: 'Giao hàng nhanh, lắp đặt chuyên nghiệp, hỗ trợ kỹ thuật tốt.'
     }
   ];
 
@@ -559,26 +567,7 @@ const Home = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: 'Nguyễn Văn A',
-                  company: 'Công ty ABC',
-                  rating: 5,
-                  comment: 'Dịch vụ rất tốt, máy photocopy chất lượng cao, giá cả hợp lý. Nhân viên phục vụ nhiệt tình.'
-                },
-                {
-                  name: 'Trần Thị B',
-                  company: 'Văn phòng XYZ',
-                  rating: 5,
-                  comment: 'Đã sử dụng dịch vụ nhiều năm, rất hài lòng về chất lượng và dịch vụ bảo hành.'
-                },
-                {
-                  name: 'Lê Văn C',
-                  company: 'Công ty DEF',
-                  rating: 5,
-                  comment: 'Giao hàng nhanh, lắp đặt chuyên nghiệp, hỗ trợ kỹ thuật tốt.'
-                }
-              ].map((testimonial, index) => (
+              {company.map((testimonial, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (

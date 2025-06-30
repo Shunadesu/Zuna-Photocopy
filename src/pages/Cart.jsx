@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart, ArrowLeft, Trash2 } from 'lucide-react';
 import { useCartStore } from '../store/useStore';
-import CartItem from '../components/cart/CartItem';
-import Button from '../components/ui/Button';
+import { CartItem, Button } from '../components';
 
 const Cart = () => {
   const { items, getTotalItems, getTotalPrice, clearCart } = useCartStore();
