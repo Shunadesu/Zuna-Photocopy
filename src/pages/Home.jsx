@@ -8,6 +8,7 @@ import SEO from '../components/ui/SEO';
 import ThemePreview from '../components/ui/ThemePreview';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 import ProductGrid from '../components/product/ProductGrid';
+import PageLoader from '../components/ui/PageLoader';
 
 const Home = () => {
   useScrollToTop(); // Scroll to top when component mounts
@@ -16,6 +17,7 @@ const Home = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
   const [buyProducts, setBuyProducts] = useState([]);
   const [rentProducts, setRentProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // Mock data for hero slides
   const heroSlides = [
@@ -340,6 +342,7 @@ const Home = () => {
     setFeaturedProducts(mockFeaturedProducts);
     setBuyProducts(mockBuyProducts);
     setRentProducts(mockRentProducts);
+    setLoading(false);
   }, []);
 
   // Auto slide
@@ -375,6 +378,10 @@ const Home = () => {
       description: 'Đội ngũ kỹ thuật hỗ trợ mọi lúc'
     }
   ];
+
+  if (loading) {
+    return <PageLoader onDone={() => setLoading(false)} />;
+  }
 
   return (
     <>
